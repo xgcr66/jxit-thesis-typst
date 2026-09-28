@@ -1,0 +1,14 @@
+.tools/
+.venv/
+__pycache__/
+*.pyc
+build/
+local-tools.json
+.env
+.env.*
+!.env.example
+~$*.docx
+.DS_Store
+.idea/
+.vscode/
+# 请勿将个人论文、证件或私人资料加入公开模板仓库。
