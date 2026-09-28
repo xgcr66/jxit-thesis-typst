@@ -2,14 +2,14 @@
 
 GitHub 仓库：https://github.com/xgcr66/jxit-thesis-typst （仓库拼写为 jxit；本机目录为 jxut-thesis-typst）。
 
-依据用户提供的《本科生毕业论文（设计）撰写基本规范（2022）》制作的**非官方模板**。使用一份结构化 Typst 内容，导出 PDF 和可编辑 Word。封面采用用户提供的江西科技学院校徽。
+依据用户提供的《本科生毕业论文（设计）撰写基本规范（2022）》制作的**非官方模板**。使用一份结构化 Typst 内容，导出 PDF 和可编辑 Word。封面校徽和书法校名均直接提取自该规范第七页的内嵌原图，横向并排展示。
 
 > 本仓库是排版模板，示例正文为填写提示。提交前以所在学院最新通知为准。请在自己的本地副本填写个人信息，公开分享时移除私人资料。
 
 ## 下载样稿
 
-- [PDF 样稿](examples/v1_本科毕业论文模板.pdf)
-- [可编辑 Word 样稿](examples/v1_本科毕业论文模板.docx)
+- [PDF 样稿](examples/v2_本科毕业论文模板.pdf)
+- [可编辑 Word 样稿](examples/v2_本科毕业论文模板.docx)
 - [格式依据与处理说明](docs/格式依据.md)
 - [双格式支持范围](docs/导出说明.md)
 
@@ -32,15 +32,15 @@ powershell -NoProfile -ExecutionPolicy Bypass -File .\setup.ps1
 .\build.ps1 -UpdateFields
 # 只生成 PDF
 .\build.ps1 -Format pdf
-# 生成带 v2 前缀的新版本
-.\build.ps1 -Version 2 -UpdateFields
+# 生成带 v3 前缀的新版本
+.\build.ps1 -Version 3 -UpdateFields
 ```
 
 输出文件：
 
 ```text
-build/v1_本科毕业论文模板.pdf
-build/v1_本科毕业论文模板.docx
+build/v2_本科毕业论文模板.pdf
+build/v2_本科毕业论文模板.docx
 ```
 
 没有 Microsoft Word 也可以生成 DOCX；打开后在目录区域右键选择“更新域 → 更新整个目录”。Word 与 Typst 是不同排版引擎，分页可能不同，各自目录对应各自页码。

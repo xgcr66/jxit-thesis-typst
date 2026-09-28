@@ -8,7 +8,8 @@
     school: "江西科技学院", college: "【待填写】", major: "【待填写】",
     class: "【待填写】", student-id: "【待填写】", author: "【待填写】",
     supervisor: "【待填写】", second-supervisor: "", confidential: "公开",
-    date: "【填写年月】", logo: "assets/xiaohui.jpg",
+    date: "【填写年月】", logo: "assets/school-emblem.jpeg",
+    school-wordmark: "assets/school-wordmark.jpeg",
   ),
   abstract-cn: (
     "【请填写研究背景。由研究领域逐步说明具体课题及研究必要性。中文摘要约300字，采用第三人称表述。】",

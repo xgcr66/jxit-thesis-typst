@@ -90,9 +90,14 @@
     #set par(first-line-indent: 0pt, justify: false)
     #align(right)[密级：#t.meta.confidential　　学号：#t.meta.student-id]
     #v(14mm)
-    #align(center, image("../" + t.meta.logo, width: 30mm))
-    #v(5mm)
-    #align(center, text(font: cfg.heading_font, size: 28pt, t.meta.school))
+    #if t.meta.at("school-wordmark", default: none) != none {
+      // 使用规范第七页内嵌原图，保持校徽与书法校名横排比例。
+      align(center, grid(columns: (31mm, 116mm), column-gutter: 2mm, align: horizon, image("../" + t.meta.logo, width: 31mm), image("../" + t.meta.school-wordmark, width: 116mm)))
+    } else {
+      align(center, image("../" + t.meta.logo, width: 30mm))
+      v(5mm)
+      align(center, text(font: cfg.heading_font, size: 28pt, t.meta.school))
+    }
     #v(17mm)
     #align(center, text(font: cfg.heading_font, size: 22pt, weight: "bold", "本科生毕业论文（设计）"))
     #v(16mm)

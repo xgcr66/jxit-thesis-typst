@@ -25,7 +25,7 @@ def run(args):
 def main():
     ap=argparse.ArgumentParser(description=__doc__)
     ap.add_argument('--format',choices=['all','pdf','docx'],default='all')
-    ap.add_argument('--version',type=int,default=1,help='输出文件名前的 v 版本号')
+    ap.add_argument('--version',type=int,default=2,help='输出文件名前的 v 版本号')
     ap.add_argument('--update-fields',action='store_true',help='使用本机 Microsoft Word 更新目录和页码')
     args=ap.parse_args()
     if args.version<1: ap.error('版本号必须大于0')

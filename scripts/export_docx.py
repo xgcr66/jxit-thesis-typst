@@ -52,6 +52,7 @@ def validate(data, root):
         if key not in data: raise ValueError(f'缺少字段：{key}')
     if not data['chapters']: raise ValueError('至少需要一章正文')
     safe_asset(root, data['meta']['logo'])
+    if data['meta'].get('school-wordmark'): safe_asset(root, data['meta']['school-wordmark'])
     for ch in list(data['chapters']) + [{'blocks': data['appendix']}]:
         has_section = False
         for b in ch['blocks']:
@@ -160,9 +161,14 @@ def build_docx(data, cfg, root, output):
     p=para(f"密级：{m['confidential']}　　学号：{m['student-id']}",indent=False);p.alignment=WD_ALIGN_PARAGRAPH.RIGHT
     space(26)
     p=para(indent=False);p.alignment=WD_ALIGN_PARAGRAPH.CENTER;p.paragraph_format.line_spacing=1.0
-    p.add_run().add_picture(str(safe_asset(root,m['logo'])),width=Cm(3))
-    p=para(indent=False);p.alignment=WD_ALIGN_PARAGRAPH.CENTER;p.paragraph_format.line_spacing=1.0
-    font(p.add_run(m['school']),hei,28,False,latin)
+    if m.get('school-wordmark'):
+        p.add_run().add_picture(str(safe_asset(root,m['logo'])),width=Cm(3.1))
+        font(p.add_run(' '),cn,12,False,latin)
+        p.add_run().add_picture(str(safe_asset(root,m['school-wordmark'])),width=Cm(11.6))
+    else:
+        p.add_run().add_picture(str(safe_asset(root,m['logo'])),width=Cm(3))
+        p=para(indent=False);p.alignment=WD_ALIGN_PARAGRAPH.CENTER;p.paragraph_format.line_spacing=1.0
+        font(p.add_run(m['school']),hei,28,False,latin)
     space(30)
     p=para('本科生毕业论文（设计）','Title',False)
     space(28)

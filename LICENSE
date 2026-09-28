@@ -20,7 +20,9 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-Exclusions: assets/xiaohui.jpg is a user-supplied institutional emblem and is
-not licensed under the MIT License. All rights in this emblem remain with
+Exclusions: assets/xiaohui.jpg, assets/school-emblem.jpeg and
+assets/school-wordmark.jpeg are institutional emblem/name assets supplied
+by the user or extracted from the user-supplied school guidance. They are
+not licensed under the MIT License. All rights in these assets remain with
 its respective rightsholders. School declaration wording is supplied for
 academic form use and is not original software code.

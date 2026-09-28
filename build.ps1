@@ -1,4 +1,4 @@
-﻿param([ValidateSet('all','pdf','docx')][string]$Format='all',[int]$Version=1,[switch]$UpdateFields)
+﻿param([ValidateSet('all','pdf','docx')][string]$Format='all',[int]$Version=2,[switch]$UpdateFields)
 $ErrorActionPreference='Stop'
 Set-Location -LiteralPath $PSScriptRoot
 $python=$null
